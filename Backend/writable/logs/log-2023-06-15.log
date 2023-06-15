@@ -1,0 +1,17 @@
+ERROR - 2023-06-15 03:47:26 --> ErrorException: pg_query(): Query failed: ERROR:  no existe el tipo «double»
+LINE 7:  "total" DOUBLE DEFAULT 0 NOT NULL,
+                 ^ in C:\xampp\htdocs\g2_compras\system\Database\Postgre\Connection.php:152
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\g2_compras\system\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'CREATE TABLE "F...')
+#2 C:\xampp\htdocs\g2_compras\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('CREATE TABLE "F...')
+#3 C:\xampp\htdocs\g2_compras\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE "F...')
+#4 C:\xampp\htdocs\g2_compras\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE "F...')
+#5 C:\xampp\htdocs\g2_compras\app\Database\Migrations\2023-06-15-033554_Facturas.php(42): CodeIgniter\Database\Forge->createTable('Facturas')
+#6 C:\xampp\htdocs\g2_compras\system\Database\MigrationRunner.php(877): App\Database\Migrations\Facturas->up()
+#7 C:\xampp\htdocs\g2_compras\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#8 C:\xampp\htdocs\g2_compras\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\xampp\htdocs\g2_compras\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\xampp\htdocs\g2_compras\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\xampp\htdocs\g2_compras\spark(97): CodeIgniter\CLI\Console->run()
+#12 {main}
